@@ -1,15 +1,14 @@
-
-		document.documentElement.style.fontSize = document.documentElement.clientWidth/320*20+'px';
+	document.documentElement.style.fontSize = document.documentElement.clientWidth/320*20+'px';
 		window.onresize = function(){
 			document.documentElement.style.fontSize = document.documentElement.clientWidth/320*20+'px';
 		};	
 
 window.onload = function(){
-	 /**Éú³ÉÒ»¸öËæ»úÊı**/
+	 /**ç”Ÿæˆä¸€ä¸ªéšæœºæ•°**/
   function randomNum(min,max){
     return Math.floor( Math.random()*(max-min)+min);
   }
-  /**Éú³ÉÒ»¸öËæ»úÉ«**/
+  /**ç”Ÿæˆä¸€ä¸ªéšæœºè‰²**/
   function randomColor(min,max){
     var r = randomNum(min,max);
     var g = randomNum(min,max);
@@ -23,7 +22,7 @@ window.onload = function(){
    /* alert(ram)*/
   }
 
-  /**»æÖÆÑéÖ¤ÂëÍ¼Æ¬**/
+  /**ç»˜åˆ¶éªŒè¯ç å›¾ç‰‡**/
   function drawPic(){
     var canvas=document.getElementById("canvas");
     var width=canvas.width;
@@ -31,29 +30,29 @@ window.onload = function(){
     var ctx = canvas.getContext('2d');
     ctx.textBaseline = 'bottom';
 
-    /**»æÖÆ±³¾°É«**/
-    ctx.fillStyle = randomColor(180,240); //ÑÕÉ«ÈôÌ«Éî¿ÉÄÜµ¼ÖÂ¿´²»Çå
+    /**ç»˜åˆ¶èƒŒæ™¯è‰²**/
+    ctx.fillStyle = randomColor(180,240); //é¢œè‰²è‹¥å¤ªæ·±å¯èƒ½å¯¼è‡´çœ‹ä¸æ¸…
     ctx.fillRect(0,0,width,height);
-    /**»æÖÆÎÄ×Ö**/
+    /**ç»˜åˆ¶æ–‡å­—**/
     var str = 'ABCEFGHJKLMNPQRSTWXY1234567890';
-    var num="";/**»ñÈ¡Ëæ»úÊıÄÚÈİ**/
+    var num="";/**è·å–éšæœºæ•°å†…å®¹**/
     for(var i=0; i<4; i++){
       var txt = str[randomNum(0,str.length)];
       num+=txt;
-      ctx.fillStyle = randomColor(50,160);  //Ëæ»úÉú³É×ÖÌåÑÕÉ«
-      ctx.font = randomNum(15,40)+'px SimHei'; //Ëæ»úÉú³É×ÖÌå´óĞ¡
+      ctx.fillStyle = randomColor(50,160);  //éšæœºç”Ÿæˆå­—ä½“é¢œè‰²
+      ctx.font = randomNum(15,40)+'px SimHei'; //éšæœºç”Ÿæˆå­—ä½“å¤§å°
       var x = 10+i*25;
       var y = randomNum(25,45);
       var deg = randomNum(-45, 45);
-      //ĞŞ¸Ä×ø±êÔ­µãºÍĞı×ª½Ç¶È
+      //ä¿®æ”¹åæ ‡åŸç‚¹å’Œæ—‹è½¬è§’åº¦
       ctx.translate(x,y);
       ctx.rotate(deg*Math.PI/180);
       ctx.fillText(txt, 0,0);
-      //»Ö¸´×ø±êÔ­µãºÍĞı×ª½Ç¶È
+      //æ¢å¤åæ ‡åŸç‚¹å’Œæ—‹è½¬è§’åº¦
       ctx.rotate(-deg*Math.PI/180);
       ctx.translate(-x,-y);
     }
-    /**»æÖÆ¸ÉÈÅÏß**/
+    /**ç»˜åˆ¶å¹²æ‰°çº¿**/
     for(var i=0; i<4; i++){
       ctx.strokeStyle = randomColor(40,180);
       ctx.beginPath();
@@ -61,7 +60,7 @@ window.onload = function(){
       ctx.lineTo( randomNum(0,width), randomNum(0,height) );
       ctx.stroke();
     }
-    /**»æÖÆ¸ÉÈÅµã**/
+    /**ç»˜åˆ¶å¹²æ‰°ç‚¹**/
     for(var i=0; i<100; i++){
       ctx.fillStyle = randomColor(0,255);
       ctx.beginPath();
@@ -71,7 +70,7 @@ window.onload = function(){
     return num
   }
   
-  /**ÅĞ¶Ï**/
+  /**åˆ¤æ–­**/
                         var user=document.getElementById("name");
 				        var bot=document.getElementsByTagName("button")[0];
 				        var ram=null;
@@ -79,37 +78,31 @@ window.onload = function(){
 				       /* alert(ram)*/
 				        bot.onclick=function(){
 //				        	alert(user.value.toUpperCase())
-			if(user.value.toUpperCase()==ram){
-				//alert("ÑéÖ¤Í¨¹ı")
-			}else if(user.value.toUpperCase()==''){
-				//alert("ÇëÊäÈëÑéÖ¤Âë")
-			}else{
-				//alert("ÑéÖ¤´íÎó£¡£¡")
-			}
+//			if(user.value.toUpperCase()==ram){
+//				/*alert("éªŒè¯é€šè¿‡")*/
+//				window.location.href='555/html'
+//			}else if(user.value.toUpperCase()==''){
+//				//alert("è¯·è¾“å…¥éªŒè¯ç ")
+//			}else{
+//				//alert("éªŒè¯é”™è¯¯ï¼ï¼")
+//			}
 //				        		alert(user.value.toUpperCase()==ram)
 				        }
 }
 
 angular.module('app', ['ngRoute','ngMessages'])
-.controller("jin", ["$scope", "$http",function($scope,$http) {
+.controller("jin", ["$scope", "$http","localStorage",function($scope,$http$localStorage) {
+	
 	$http({
 		url:"http://47.90.20.200:1602/users/login",
 		method: "post",
 		data:{username:'username',password:'password'}
 	}).then(function(e) {
 		console.log(e)
-		
+
+	
 	}, function() {})
 	$scope.btn = function(){
 		
 	}
 }])
-
-        
-    
-       
-    
-
-
-
-
