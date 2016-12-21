@@ -9,30 +9,30 @@
  * Main module of the application.
  */
 angular
-  .module('rulerApp', ['ui.router','chart.js'])
+  .module('rulerApp', ['ui.router','chart.js','ngMessages'])
   .constant("url","http://47.90.20.200/")
   .config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
   	$urlRouterProvider.when("","/jin").when("/gy","/gy/yan").otherwise("/404");
    $stateProvider.state("jin",{
         url:"/jin",
         templateUrl:"views/jin.html",
-        controller:"jin"
+//      controller:"jin"
       }).state("gy",{
         url:"/gy",
         templateUrl:"views/gy.html",
-        controller:"gy"
+//      controller:"gy"
       }).state("miao",{
         url:"/miao",
         templateUrl:"views/miao.html",
-        controller:"miao"
+//      controller:"miao"
       }).state("gy.li",{
         url:"/li",
         templateUrl:"views/li.html",
-        controller:"li"
+//      controller:"li"
       }).state("gy.yan",{
         url:"/yan",
         templateUrl:"views/yan.html",
-        controller:"yan"
+//      controller:"yan"
       }).state("gy.miao",{
         url:"/miao",
         templateUrl:"views/miao.html",
@@ -40,7 +40,7 @@ angular
       }).state("nie",{
         url:"/nie",
         templateUrl:"views/nie.html",
-        controller:"nie"
+//      controller:"nie"
       }).state("404",{
         url:"/404",
         templateUrl:"404.html"

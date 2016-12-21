@@ -90,9 +90,8 @@ window.onload = function(){
 				        }
 }
 
-angular.module('app', ['ngRoute','ngMessages'])
+angular.module('rulerApp')
 .controller("jin", ["$scope", "$http","localStorage",function($scope,$http$localStorage) {
-	
 	$http({
 		url:"http://47.90.20.200:1602/users/login",
 		method: "post",
