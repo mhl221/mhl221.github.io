@@ -1,0 +1,60 @@
+<div ng-controller="nie">
+		<div class="row">
+			 <div class="col-sm-12">
+			    <img src="images/jlogo.PNG">
+			 </div>
+		</div>
+		<form class="form-horizontal"  ng-submit='send(myForm.$valid)' name="myForm">
+		  
+		    <label for="inputEmail3" class="i control-label">用户名：</label>
+		   
+		      <input type="text" class="input-one_n"  ng-minlength='8' ng-maxlength='11' name="u_n" ng-model='updata.username' id="n_zh" >
+		      <div class="zhanwei">
+		      	<span ng-messages="myForm.u_n.$error" id="zw">
+				<span ng-message="minlength" id="zw">☀用户名不可少于8位</span>
+				<span ng-message="maxlength" id="zw">☀用户名不可大于11位</span>
+	          </span>
+		      
+		  
+		  </div>
+		  <div class="pas">
+		    <label for="inputPassword3" class="mi i">密码：  </label>
+		    <div class="one">
+		      <input type="password" class="input-one_n" ng-minlength='8' ng-maxlength='11' name="u_nm" ng-model='updata.password' id="n_mm" required="">
+		    </div>
+		  </div>
+		  <div class="zhanwei">
+		      	<span ng-messages="myForm.u_nm.$error" id="zw">
+				<span ng-message="minlength" id="zw">☀密码不可少于8位</span>
+				<span ng-message="maxlength" id="zw">☀密码不可大于11位</span>
+	          </span>
+	          </div>
+		  <div class="pas">
+		    <label for="inputPassword3" class="mi i">确认密码：</label>
+		    <div class="one">
+		      <input type="password" class="input-one_n"ng-minlength='8' ng-maxlength='11' name="u_nmm"  id="n_cmm" required="">
+		      <!--<div class="zhanwei"></div>-->
+		    </div>
+		    <div class="zhanwei">
+				<span id="zww"></span>
+	          </div>
+		  </div>
+		  <div class="yan" >
+		    <label for="inputRandom" class="i">验证码：</label>
+		    <div class="three">
+		      <input type="text" class="input-one_n" id="name" >
+		    </div>
+		    <div class="two">
+			   <canvas id="canvas" width="120" height="40"></canvas>
+			   <a href="javascript:;" id="changeImg">看不清，换一张</a>
+			  </div>
+		  </div>
+		  <div class="zhanwei">
+				<span id="zwww"></span>
+	          </span>
+	          </div>
+		  <div class="batei">
+		       <button class="btn btn-success" ng-click="a()" >注册</button>	
+		  </div>
+		</form>
+	</div>

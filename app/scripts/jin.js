@@ -76,18 +76,7 @@ window.onload = function(){
 				        var ram=null;
 				        ram=drawPic();
 				       /* alert(ram)*/
-				        bot.onclick=function(){
-//				        	alert(user.value.toUpperCase())
-//			if(user.value.toUpperCase()==ram){
-//				/*alert("验证通过")*/
-//				window.location.href='555/html'
-//			}else if(user.value.toUpperCase()==''){
-//				//alert("请输入验证码")
-//			}else{
-//				//alert("验证错误！！")
-//			}
-//				        		alert(user.value.toUpperCase()==ram)
-				        }
+				       
 }
 
 angular.module('rulerApp')
@@ -103,5 +92,9 @@ angular.module('rulerApp')
 	}, function() {})
 	$scope.btn = function(){
 		
+	}
+	$scope.cv = function(){
+		alert(1)
+//		window.location.href='nie.html'
 	}
 }])
