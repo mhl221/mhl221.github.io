@@ -1,8 +1,27 @@
-	document.documentElement.style.fontSize = document.documentElement.clientWidth/320*20+'px';
+
+		document.documentElement.style.fontSize = document.documentElement.clientWidth/320*20+'px';
 		window.onresize = function(){
 			document.documentElement.style.fontSize = document.documentElement.clientWidth/320*20+'px';
 		};	
 
+/*input  密码显示*/
+   //点击多选框切换text和password的隐藏和显示
+        function showHidePassword() {
+            $("#text").toggle();
+            $("#inputPassword3").toggle();
+        }
+ 
+        //text框失去焦点把text框的值赋值给password框
+        function textBlur() {
+            $("#inputPassword3").val($("#text").val());
+        }
+ 
+        //password框失去焦点把password框的值赋值给text框
+        function passwordBlur() {
+            $("#text").val($("#inputPassword3").val());
+        }
+        
+        
 window.onload = function(){
 	 /**生成一个随机数**/
   function randomNum(min,max){
@@ -76,25 +95,63 @@ window.onload = function(){
 				        var ram=null;
 				        ram=drawPic();
 				       /* alert(ram)*/
+<<<<<<< HEAD
 				       
+=======
+				        bot.onclick=function(){
+//				        	alert(user.value.toUpperCase())
+		if(user.value.toUpperCase()==ram){
+				alert("验证通过")
+				window.location.href='gy.html'
+			}else if(user.value.toUpperCase()==''){
+				alert("请输入验证码")
+				return false;
+			}else{
+				alert("验证错误！！")
+			   user.value='';
+			}
+	   }
+>>>>>>> origin/master
 }
 
-angular.module('rulerApp')
-.controller("jin", ["$scope", "$http","localStorage",function($scope,$http$localStorage) {
-	$http({
-		url:"http://47.90.20.200:1602/users/login",
-		method: "post",
-		data:{username:'username',password:'password'}
-	}).then(function(e) {
-		console.log(e)
 
+angular.module('app', ['ngRoute','ngMessages'])
+.controller("jin", ["$scope", "$http",function($scope,$http) {
 	
-	}, function() {})
 	$scope.btn = function(){
-		
+		var use=inputEmail3.value;
+		var pwd=inputPassword3.value;
+		console.log(use+pwd);
+		$http({
+			url:"http://47.90.20.200:1602/users/login",//server/users/login/
+			method: "post",
+			data:{'username':use,'password':pwd}
+		}).then(function(e){
+			console.log(e);	 
+			// console.log('成功')
+		    //window.location.href="55.html";
+		}, function(e) {
+			name.value = '555'
+			alert("登录失败！");
+			
+		});
 	}
+<<<<<<< HEAD
 	$scope.cv = function(){
 		alert(1)
 //		window.location.href='nie.html'
 	}
 }])
+=======
+
+}])
+
+        
+    
+       
+    
+
+
+
+
+>>>>>>> origin/master
