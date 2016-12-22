@@ -4,25 +4,67 @@
 			document.documentElement.style.fontSize = document.documentElement.clientWidth/320*20+'px';
 		};	
 
-/*input  密码显示*/
-   //点击多选框切换text和password的隐藏和显示
-        function showHidePassword() {
-            $("#text").toggle();
-            $("#inputPassword3").toggle();
-        }
- 
-        //text框失去焦点把text框的值赋值给password框
-        function textBlur() {
-            $("#inputPassword3").val($("#text").val());
-        }
- 
-        //password框失去焦点把password框的值赋值给text框
-        function passwordBlur() {
-            $("#text").val($("#inputPassword3").val());
-        }
+
+
+
+angular.module('app', ['ngRoute','ngMessages']).controller("jin", ["$scope","$http","$location",function($scope,$http,$location) {
+	
+	$scope.btn = function(){
+		var use=inputEmail3.value;
+		var pwd=inputPassword3.value;
+		
+		console.log(use+pwd);
+		$http({
+			url:"http://47.90.20.200:1602/users/login",//server/users/login/
+			method: "post",
+			data:{'username':use,'password':pwd}
+		}).then(function(e){
+			console.log(e);	 
+			/*console.log('成功')*/
+		    //window.location.href="55.html";
+		   if(use == e.config.data.username && pwd == e.config.data.password){
+		     	 alert(1) 
+		        $location.path('/56.html')
+		     	//$window.location.href = '55.html'
+		   }else{
+		     	alert(2)
+		   }
+		}, function(e) {
+			console.log('登录失败');
+
+		});
+	}
+   $scope.new = function(){
+    	$location.path('/nie.html')
+   }
+   $scope.forge = function(){
+
+   }
+}]).directive("testDw",function () {
+       return{
+           restrict:"ECMA",
+           scope:"=",
+           template:'<canvas id="canvas" width="120" height="40"></canvas>',
+           link:function (scope,element,attrs) {
+              /*input  密码显示*/
+		   //点击多选框切换text和password的隐藏和显示
+			        function showHidePassword() {
+			        	var text = element.find('#text');
+			            text.toggle();
+			            var inputPassword3 = element.find('#inputPassword3');
+			            inputPassword3.toggle();
+			        }
+		
+		        //text框失去焦点把text框的值赋值给password框
+		    /*    function textBlur() {
+		            $("#inputPassword3").val($("#text").val());
+		        }*/
+		        //password框失去焦点把password框的值赋值给text框
+		     /*  function passwordBlur() {
+		            $("#text").val($("#inputPassword3").val());
+		        }*/
         
         
-window.onload = function(){
 	 /**生成一个随机数**/
   function randomNum(min,max){
     return Math.floor( Math.random()*(max-min)+min);
@@ -35,7 +77,8 @@ window.onload = function(){
     return "rgb("+r+","+g+","+b+")";
   }
   drawPic();
-  document.getElementById("changeImg").onclick = function(e){
+   
+  element.find("#changeImg").onclick = function(e){
     e.preventDefault();
     ram=drawPic();
    /* alert(ram)*/
@@ -43,7 +86,7 @@ window.onload = function(){
 
   /**绘制验证码图片**/
   function drawPic(){
-    var canvas=document.getElementById("canvas");
+    var canvas=element.find('#canvas');
     var width=canvas.width;
     var height=canvas.height;
     var ctx = canvas.getContext('2d');
@@ -90,61 +133,31 @@ window.onload = function(){
   }
   
   /**判断**/
-                        var user=document.getElementById("name");
-				        var bot=document.getElementsByTagName("button")[0];
+                        /*var user=document.getElementById("name");
+				        var bot=document.getElementsByTagName("button")[0];*/
+				     var user = element.find('#name');
+				     var bot = element.find('button')[0];
 				        var ram=null;
 				        ram=drawPic();
 				       /* alert(ram)*/
-<<<<<<< HEAD
-				       
-=======
 				        bot.onclick=function(){
 //				        	alert(user.value.toUpperCase())
 		if(user.value.toUpperCase()==ram){
 				alert("验证通过")
-				window.location.href='gy.html'
+	
 			}else if(user.value.toUpperCase()==''){
 				alert("请输入验证码")
-				return false;
+		
 			}else{
 				alert("验证错误！！")
-			   user.value='';
+			     user.value='';
+			
 			}
 	   }
->>>>>>> origin/master
 }
-
-
-angular.module('app', ['ngRoute','ngMessages'])
-.controller("jin", ["$scope", "$http",function($scope,$http) {
-	
-	$scope.btn = function(){
-		var use=inputEmail3.value;
-		var pwd=inputPassword3.value;
-		console.log(use+pwd);
-		$http({
-			url:"http://47.90.20.200:1602/users/login",//server/users/login/
-			method: "post",
-			data:{'username':use,'password':pwd}
-		}).then(function(e){
-			console.log(e);	 
-			// console.log('成功')
-		    //window.location.href="55.html";
-		}, function(e) {
-			name.value = '555'
-			alert("登录失败！");
-			
-		});
-	}
-<<<<<<< HEAD
-	$scope.cv = function(){
-		alert(1)
-//		window.location.href='nie.html'
-	}
-}])
-=======
-
-}])
+           }
+   
+});
 
         
     
@@ -154,4 +167,3 @@ angular.module('app', ['ngRoute','ngMessages'])
 
 
 
->>>>>>> origin/master
