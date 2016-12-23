@@ -24,7 +24,13 @@
 
 
 
-angular.module('rulerApp').controller("jin", ["$scope","$http","$location",function($scope,$http,$location) {
+angular.module('rulerApp').controller("jin", ["$scope","$http","$location","$cookies",function($scope,$http,$location,$cookies) {
+     
+     	 // Find tomorrow's date.
+  var expireDate = new Date();
+  expireDate.setDate(expireDate.getDate() + 1);
+  // Setting a cookie
+  $cookies.put('myFavorite', 'oatmeal', {'uid': expireDate});
      
 	$scope.btn = function(){
 		var use=inputEmail3.value;
