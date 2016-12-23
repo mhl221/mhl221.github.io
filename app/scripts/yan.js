@@ -1,6 +1,6 @@
 angular.module('rulerApp')
 .controller("yan", ["$scope", "$http","$location", function($scope, $http,$location) {
-	
+	alert(uid)
 	//	$http({
 	//		url:"http://47.90.20.200:1602/users/login",
 	//		method: "post",

@@ -10,7 +10,7 @@
  */
 angular
   .module('rulerApp', ['ui.router','chart.js','ngMessages'])
-  .constant("url","http://47.90.20.200/")
+  .constant("url","http://47.90.20.200:1602/")
   .config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
   	$urlRouterProvider.when("","/jin").when("/gy","/gy/yan").otherwise("/404");
    $stateProvider.state("jin",{
@@ -45,4 +45,6 @@ angular
         url:"/404",
         templateUrl:"404.html"
       })
+      
+       var uid = '';
   }])

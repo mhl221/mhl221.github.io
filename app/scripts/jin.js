@@ -31,17 +31,16 @@ angular.module('rulerApp').controller("jin", ["$scope","$http","$location",funct
 		var pwd=inputPassword3.value;
 		console.log(use+pwd);
 		$http({
-			url:"http://47.90.20.200:1602/users/login",
+			url:url+"users/login",
 			method: "post",
 			data:{'username':use,'password':pwd}
 		}).then(function(e){
 			console.log(e);	 
            
 		   if(use == e.config.data.username && pwd == e.config.data.password ){
-		      $scope.Uid=e.data.uid;
-              console.log( $scope.Uid)
+		      uid=e.data.uid;
 	          
-		   /*    $location.path('/yan');*/
+		   $location.path('/gy');
 		   }else{
 		 
 		   }
