@@ -10,7 +10,7 @@ form{ margin-top: 0.8rem;}
 label{ float: left; margin-left: 2rem; line-height: 1.5rem; font-size: 0.7rem; }
 
 
-.input-one{ width: 60%; height: 1.5rem; border: 0.05rem solid #269ABC; font-size: 0.8rem; border-radius: 0.2rem; }
+.input-one{ width: 55%; height: 1.5rem; border: 0.05rem solid #269ABC; font-size: 0.8rem; border-radius: 0.2rem; margin-left: -0.8rem; }
 
 
 .two{  margin-top: 1rem;}
@@ -29,11 +29,7 @@ label{ float: left; margin-left: 2rem; line-height: 1.5rem; font-size: 0.7rem; }
 			float: left;
 			margin-left: 1.275rem;
 		}
-testDw{    width: 3.5rem;
-	       height: 1.4rem;
-			float: left;
-			margin-left: 1.275rem;
-		}
+
 #input2{
 	width: 3rem;
 	height: 1.5rem;
@@ -67,7 +63,7 @@ button a{ color: #fff;}
 .checkbox input{ float: left;  margin-left: 0.5rem;}
 .checkbox p{ width: 5rem; float: right; line-height: 0.7rem; margin-left: 0.1rem;}
 
-.one s img{ position: absolute; float: left; margin-left: 8.8rem; margin-top: 0.7rem; width:0.5rem; height: 0.2rem;}
+.one s img{ position: absolute; float: left; margin-left: 7rem; margin-top: 0.7rem; width:0.5rem; height: 0.2rem;}
 .code{
 
 font-family:Arial,宋体;
