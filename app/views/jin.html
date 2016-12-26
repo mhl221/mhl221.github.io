@@ -1,5 +1,5 @@
 	
-	<div ng-controller="jin" onLoad="createCode();">
+	<div ng-controller="jin" onLoad="createCode()">
 		<div class="row">
 			 <div class="col-sm-12">
 			    <img src="images/jlogo.PNG">
@@ -42,13 +42,17 @@
 		  </div>-->
 		  <div class="zhanwei"></div>
 		      <div class="checkbox">
-		          <input type="checkbox" ng-click="forge()"> <p>记住密码</p>
+		      	 
+		          <!--<input type="checkbox" id="jizhu" ng-click="forge()">-->
+		          	 <input type="checkbox" ng-model="qq">
+		          	<p>记住密码</p>
+		         
 		      </div>
 		  <div class="batei">
-		       <button  class="btn btn-primary" ng-click="btn()">	
+		       <button  class="btnn btn-primary" ng-click="btn()">	
 		       	<a href="javascript:;">登录</a></button>
 
-		       <p class="new" ui-sref="nie"  >新用户注册</p>
+		       <p class="neww" ui-sref="nie"  >新用户注册</p>
 		  </div>
 		</form>
 	</div>
