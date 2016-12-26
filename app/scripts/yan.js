@@ -1,14 +1,44 @@
-angular.module('rulerApp')
+angular.module('rulerApp').filter('paging',function(){      //paging 过滤器
+  return function(lists,start){
+  	alert(lists)//两个参数 lists 是在 html 里你ng-repeat的原始数据：                                   //  start 也就是 paging 后面传的参数，即 currentPage*listsPerPage
+    return lists.slice(start)     //将原始数据按照 start 分割
+  }
+})
 .controller("yan", ["$scope", "$http","$location","$cookieStore",function($scope, $http,$location,$cookieStore) {
-	
-	alert(uid)
 		$http({
 			url:"http://47.90.20.200:1602/item",
 			method: "get",
 			params:{'uid':$cookieStore.get('uid')}
 		}).then(function(e) {
+			console.log(e)
 			$scope.data = e.data;
+			$scope.dataNum =  $scope.data.length;  //获得数据总个数
+    $scope.pages = Math.ceil($scope.dataNum/3);         //按照每页显示3个数据，得到总页数
+    $scope.pageNum = [];                                //生成页码，在 html里 ng-repeat 出来
+    for(var i=0;i<$scope.pages;i++){
+      $scope.pageNum.push(i);
+    }
+
+    $scope.currentPage = 0;                       //设置当前页是 0
+    $scope.listsPerPage = 3;                      //设置每页显示 3 个
+
+    $scope.setPage = function(num){             // 当点击页码数字时执行的函数
+      $scope.currentPage = num;                 //将当前页 设置为 页码数
+    }
+
+    $scope.prevPage = function(){               //点击上一页执行的函数
+          if($scope.currentPage > 0){
+              $scope.currentPage--;
+          }
+      }
+     $scope.nextPage = function(){              //点击下一页执行的函数
+          if ($scope.currentPage < $scope.pages-1){
+              $scope.currentPage++;
+          }
+      }
    }, function() {})
+	
+	
 	
 $scope.del = function(index) {
 			$scope.data.splice(index, 1)
