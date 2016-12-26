@@ -1,17 +1,17 @@
-.nav{
+.nav2{
 
 	width: 100%;
 	position: relative;
-	border: 1px solid #000;
+	
 	float: left;
 }
-.nav input{
+.nav2 input{
 	width: 80%;
 	height: 1rem;
 	float: left;
 	clear: both;
 }
-.p{
+.pip{
 	clear: both;
     width: 3rem;
     height: 1rem;
@@ -32,7 +32,7 @@
 
 	
 }
-.btn{
+.btn2{
 
 	clear: both;
 	float: left;
@@ -41,21 +41,21 @@
 	width: 100%;
 	float: left;	
 }
-.inp input{
-	width: 80%;
-	height: 1rem;
-	float: left;
-	clear: both;
-	}
+
 	.bottopm{
-		position: absolute;
-		bottom: 0;
+		
 		width: 20%;
-		height: 1rem;
-		background: red;
-		right: 0;
+		height: 5rem;
+	
+		
 		text-align: center;
-		color: #000;
+		
 		line-height: 1rem;
 		margin: 0 auto;
+	}
+	.sca{
+		position:absolute;
+		
+		right: 0;
+		bottom: 0;
 	}
