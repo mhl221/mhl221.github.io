@@ -48,6 +48,5 @@ angular
         url:"/404",
         templateUrl:"404.html"
       })
-      
-       var uid = '';
+
   }])
