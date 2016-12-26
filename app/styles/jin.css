@@ -1,13 +1,13 @@
 *{ margin: 0; padding: 0; list-style: none;}
 
-body{ background: #faf7f9; overflow-x: hidden;}
-.col-sm-12{margin-top: 1.875rem;}
+body{ background: #faf7f9; overflow-x: hidden; background: url(../images/bj.jpg); }
+.col-sm-12{margin-top: 1.875rem; }
 .col-sm-12 img{ display: block; width: 11.008rem; height:4.875rem; margin: 0 auto;}
 
 .form-horizontal{ text-align:center;}
 form{ margin-top: 0.8rem;}
 
-label{ float: left; margin-left: 2rem; line-height: 1.5rem; font-size: 0.7rem; }
+label{ float: left; margin-left: 2rem; line-height: 1.5rem; font-size: 0.7rem; color: #fff; }
 
 
 .input-one{ width: 55%; height: 1.5rem; border: 0.05rem solid #269ABC; font-size: 0.8rem; border-radius: 0.2rem; margin-left: -0.8rem; }
@@ -24,11 +24,7 @@ label{ float: left; margin-left: 2rem; line-height: 1.5rem; font-size: 0.7rem; }
 			line-height: 1rem;
 			margin: 0 auto;
 	}
-#canvas{    width: 3.5rem;
-	       height: 1.4rem;
-			float: left;
-			margin-left: 1.275rem;
-		}
+
 
 #input2{
 	width: 3rem;
@@ -52,6 +48,7 @@ label{ float: left; margin-left: 2rem; line-height: 1.5rem; font-size: 0.7rem; }
 span{  font-family: "微软雅黑"; color: red; font-size: 0.5rem;margin-left: 0rem;}
 .zhanwei{ height: 0.85rem; line-height: 0.85rem; }
 .zhanwei span{ float: left; margin-left: 0.5rem;}
+.checkbox p{ color: #fff;}
 .form-group{ margin-bottom: 0px;}
 button{  width: 75%; height: 1.5rem; font-size: 0.8rem; border-radius: 0.2rem; font-family: "微软雅黑"; color: red;}
 button a{ color: #fff;}
@@ -84,3 +81,96 @@ border:0;
 #look{ color: red; font-size: 0.5rem; margin-left: 1.1rem;}
 iframe{ width: 13rem; overflow: hidden;}
 #iframe-wrap{ height:2rem;}
+.btnn{ background:darkolivegreen;}
+/*.inp {
+  border: 2px solid #5E6C77;
+  font-size: 1.5em;
+  padding: .25em .5em .3125em;
+  color: #5E6C77;
+  border-radius: .25em;
+  background: transparent;
+  -webkit-transition: all .100s;
+  transition: all .100s;
+  width: 55%;
+}
+.inp:focus {
+  outline: none;
+  color: #A2ACB3;
+  border-color: #A2ACB3;
+}
+.inp.keyup {
+  color: white;
+  border-color: white;
+  text-shadow: 0 0 .125em white;
+  box-shadow: 0 0 .25em white,inset 0 0 .25em white;
+}*/
+
+/*body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}*/
+
+/*canvas {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.inp {
+  font-family: "Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;
+}
+
+::-webkit-input-placeholder {
+  color: #5E6C77;
+  text-shadow: 0 0 .125em transparent;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+.inp:focus::-webkit-input-placeholder {
+  opacity: .5;
+}
+
+::-moz-placeholder {
+  color: #5E6C77;
+  text-shadow: 0 0 .125em transparent;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+.inp:focus::-moz-placeholder {
+  opacity: .5;
+}
+
+:-ms-input-placeholder {
+  color: #5E6C77;
+  text-shadow: 0 0 .125em transparent;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+.inp:focus:-ms-input-placeholder {
+  opacity: .5;
+}*/
+
+/*html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  background: #282E33;
+}*/
