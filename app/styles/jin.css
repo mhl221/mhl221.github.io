@@ -82,7 +82,5 @@ border:0;
 			float: left;
 			margin-left: 1.275rem; }
 #look{ color: red; font-size: 0.5rem; margin-left: 1.1rem;}
-iframe{ width: 13rem; height: 2rem; overflow: hidden;}
-#iframe-wrap{ height: 2rem; overflow: hidden;}
-.track-on{ height: 2rem;}
-.button-on{ height: 2rem;}
+iframe{ width: 13rem; overflow: hidden;}
+#iframe-wrap{ height:2rem;}

@@ -48,11 +48,8 @@ angular.module('rulerApp').controller("jin", ["$scope","$http","$location","$coo
 		    var checked = [];
 			if($scope.qq == true){
 				console.log(1)
-			checked.push('red');
-     /*      $cookieStore.put('username',use)
-           $cookieStore.put('password',pwd)
-             use = $cookieStore.put('username',use)
-             pwd = $cookieStore.put('password',pwd)*/
+			
+
 			}else{
 				console.log(2)
 			}
