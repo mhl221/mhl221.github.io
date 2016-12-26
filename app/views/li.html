@@ -13,21 +13,30 @@
          </p>
          <p class="p2">
          	 <input type="radio" ng-model="x.type" value="0"/>单选
+         </p>    <p class="p2">
+         	 <input type="radio" ng-model="x.type" value="3"/>简答‘
          </p>
-         <p class="p2">
-         	 <input type="radio" ng-model="x.type" value="3"/>简答
-         </p>
-            <div class="inp" ng-show = "x.type == 2||x.type == 0">
-                <p><input type="text" placeholder="请输入"/>删除</p>
+            <div class="inp" ng-show = "x.type == 2">
+                <p><input type="text" placeholder="请输入"/><span>删除</span></p>
             </div>
-            <div class="inp" ng-show = "x.type == 3||x.type == 1">
-                <p><input type="text" placeholder="请输入"/>删除</p>
-                <p><input type="text" placeholder="请输入"/>删除</p>
-                <p><input type="text" placeholder="请输入"/>删除</p>
+            <div class="inp" ng-show = "x.type == 3">
+                <p><input type="text" placeholder="请输入..." ng-model="ab"/><span ng-click="shc()">删除</span></p>
+                <p><input type="text" placeholder="请输入"/><span>删除</span></p>
+                <p><input type="text" placeholder="请输入"/><span>删除</span></p>
+            </div>
+             <div class="inp" ng-show = "x.type == 0">
+                <p><input type="text" placeholder="请输入"/><span>删除</span></p>
+            </div>
+            <div class="inp" ng-show = "x.type == 1">j
+                <p><input type="text" placeholder="请输入..."/><span ng-click="shc()">删除</span></p>
+                <p><input type="text" placeholder="请输入"/><span>删除</span></p>
+                <p><input type="text" placeholder="请输入"/><span>删除</span></p>
             </div>
          </div>
  <div class="btn" class="btn btn-default glyphicon glyphicon-plus" ng-click="add()">
       +   	
 </div>
-        <div class="bottopm">添加问题</div>
+        <div class="bottopm" ng-click="tian()">添加问题</div>
 </div>
+
+
