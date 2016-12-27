@@ -1,5 +1,5 @@
 angular.module('rulerApp')
- .controller("li",function($scope) {
+ .controller("li",["$scope","$http",function($scope,$http){
  	$scope.data = {"option":[],"title":""}
  	$scope.add = function(){
 		$scope.data.option.push({"title":"","opt":[{"op":"","num":0}],"type":"-1","top":[]})
@@ -19,4 +19,64 @@ angular.module('rulerApp')
 		$scope.data.option[index].top.splice(index2,1)
 		
 	}
- })
+	
+	$scope.acs = function(){
+		       $http({
+						url:"http://47.90.20.200:1602/item",
+						method: "post",
+						data:{"data":$scope.data}
+					}).then(function(e) {
+						
+						$scope.list = e.data;
+						console.log(e)
+			
+						/*if($scope.list.option) {
+							for(var j = 0; j < $scope.list.option.length; j++) {
+								if($scope.list.option[j].type == 0) { // 单选题
+									alert(1)
+									$scope.rad.push($scope.list.option[j])
+								} else if($scope.list.option[j].type == 1) { //多选题
+									alert(1)
+									$scope.box.push($scope.list.option[j])
+								} else if($scope.list.option[j].type == 2) { //填空题
+									alert(1)
+									$scope.tex.push($scope.list.option[j])
+								} else { //问答题
+									alert(1)
+									$scope.arear.push($scope.allData.option[j])
+								}
+							}
+						}
+						$("#back").click(function() {
+							$scope.bg = true;
+							$("#box").css('display', "block");
+							$("#xiangxi").css('display', "none");
+							$scope.tex = [];
+							$scope.rad = [];
+							$scope.box = [];
+							$scope.arear = [];
+						})
+					
+					if($scope.bg) {
+						$("#box").css('display', "none");
+						$("#xiangxi").css('display', "block");
+						$scope.bg = false;
+					} else {
+						$("#box").css('display', "block");
+						$("#xiangxi").css('display', "none");
+						$scope.bg = true;
+					}*/
+				},function(e){
+                })
+						
+					
+ }
+					
+					
+	
+	
+ }])
+ 
+
+               
+				
