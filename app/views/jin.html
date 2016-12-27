@@ -6,7 +6,7 @@
 		</div>
 		<form class="form-horizontal"  ng-submit='send(myForm.$valid)' name="myForm">
 		    <label class="jin" for="inputEmail3" class="control-label">用户名</label>
-		      <input type="text" class="input-one" id="inputEmail3" ng-minlength='8' ng-maxlength='18' name="user_name" required="" ng-model='inputTel11' >
+		      <input type="text" class="input-one" id="inputEmail3" placeholder="☺请输入账号..." onfocus="placeholder=''" ng-minlength='8' ng-maxlength='18' name="user_name" required="" ng-model='inputTel11' >
 		      <div class="zhanweiq">
 			      	<span ng-messages="myForm.user_name.$error">
 						<span ng-message="minlength">☀用户名不可少于8位</span>
@@ -17,15 +17,13 @@
 		    <label for="inputPassword3" class="jin mi">密&nbsp;  &nbsp;码  </label>
 		    <div class="one">
 		    	<s onclick="showHidePassword()"><img src="images/yan.png"></s>
-		       <input type="password" class="input-one" id="inputPassword3" required="" onblur="passwordBlur()" />
+		       <input type="password" class="input-one" id="inputPassword3" placeholder="☌请输入密码..." onfocus="placeholder=''" required="" onblur="passwordBlur()" />
                <input type="text"  class="input-one" id="text" style="display:none" onblur="textBlur()"/>
 		       <div class="zhanweiq"></div>
 		    </div>
 		  </div>
-            <!--<div id="iframe-wrap">
-		        <iframe id="iframe" src="http://www.jq22.com/demo/jQuery-slide20161116" frameborder="0"  width="100%">
-		        </iframe>
-		    </div>-->
+		    <iframe  src="http://www.jq22.com/demo/jQuery-slide20161116" frameborder="0" width="100%" class="yanzheng">
+        </iframe>
 		  <div class="zhanweiq"></div>
 	      <div class="checkbox">
 	          	 <input type="checkbox" ng-model="qq">

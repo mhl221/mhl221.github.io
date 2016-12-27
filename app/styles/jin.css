@@ -5,13 +5,17 @@ body{ background: #faf7f9; overflow-x: hidden;  background: url(../images/bj.jpg
 .col-sm-12 img{ display: block; width: 11.008rem; height:4.875rem; margin: 0 auto;}
 
 .form-horizontal{ text-align:center;}
-form{ margin-top: 0.8rem;}
+form{ margin-top: 3rem;}
 
 .jin{ float: left; margin-left: 2rem; line-height: 1.5rem; font-size: 0.9rem; color: #fff; }
 
-
-.input-one{ width: 55%; height: 1.5rem; border: 0.05rem solid #269ABC; font-size: 0.8rem; border-radius: 0.2rem; margin-left: -0.8rem; }
-
+.input-one:-ms-input-placeholder{font-size: .3rem;}
+.input-one{ width: 55%; height: 1.5rem;
+text-indent: 10px; border: 0.05rem solid #269ABC; font-size: 0.8rem; border-radius: 0.2rem; margin-left: -0.8rem; }
+.yanzheng{margin-top: .5rem;width: 83%;
+margin-left: .5rem;
+height: 2rem;
+}
 
 .two{  margin-top: 1rem;}
 .two a{ width: 4rem; height: 1rem; display: block; float: left;font-size: 0.7rem;}

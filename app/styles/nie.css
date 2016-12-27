@@ -38,6 +38,10 @@ form{ margin-top: 0.8rem;}
 	margin: 0;
 	outline: none;
 	}
+	#tuu{
+	box-shadow:0 0 2rem  green;
+border-bottom-right-radius:1.2rem;
+border-top-left-radius: 1.2rem;}
 #changeImg{
 	width: 4rem;
 	height: 1rem;
