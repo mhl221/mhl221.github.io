@@ -1,4 +1,5 @@
 	<div class="li2" ng-controller="li">
+  <div class="nav3"><input type="text" ng-model="data.title"/></div>
    <div ng-repeat="x in data.option" class="nav2">
      <p>问题{{$index+1}}<span class="ccvt" ng-click="cct($index)">删除</span></p>
      <input type="text" placeholder="Enter email" ng-model="x.title" />

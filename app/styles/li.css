@@ -18,6 +18,13 @@
 	    color: #000;
 	clear: both;
 }
+.nav3 input{
+	width: 80%;
+	height: 1rem;
+	float: left;
+	    color: #000;
+	clear: both;
+}
 .pip{
 	clear: both;
     width: 3rem;
