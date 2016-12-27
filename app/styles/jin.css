@@ -1,6 +1,6 @@
 *{ margin: 0; padding: 0; list-style: none;}
 
-body{ background: #faf7f9; overflow-x: hidden; background: url(../images/bj.jpg); }
+body{ background: #faf7f9; overflow-x: hidden;  background: url(../images/bj.jpg); }
 .col-sm-12{margin-top: 1.875rem; }
 .col-sm-12 img{ display: block; width: 11.008rem; height:4.875rem; margin: 0 auto;}
 

@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('rulerApp', ['ui.router','chart.js','ngMessages',"ngCookies"])
+  .module('rulerApp', ['ui.router','chart.js','ngMessages',"ngCookies",'summernote'])
   .constant("url","http://47.90.20.200:1602/")
   .config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
   	$urlRouterProvider.when("","/jin").when("/gy","/gy/yan").otherwise("/404");
@@ -41,6 +41,9 @@ angular
         url:"/nie",
         templateUrl:"views/nie.html",
 //      controller:"nie"
+      }).state("niez",{
+        url:"/niez",
+        templateUrl:"views/niez.html"
       }).state("404",{
         url:"/404",
         templateUrl:"404.html"
