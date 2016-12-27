@@ -47,8 +47,6 @@ angular.module('rulerApp').controller("jin", ["$scope","$http","$location","$coo
 		    var checked = [];
 			if($scope.qq == true){
 				console.log(1)
-			
-
 			}else{
 				console.log(2)
 			}
