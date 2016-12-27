@@ -1,7 +1,8 @@
-angular.module('rulerApp').filter('paging',function(){      //paging 过滤器
+angular.module('rulerApp').filter('paging',function(){      
   return function(lists,start){
-  	//两个参数 lists 是在 html 里你ng-repeat的原始数据：                                   //  start 也就是 paging 后面传的参数，即 currentPage*listsPerPage
-    return lists.slice(start)     //将原始数据按照 start 分割
+  	if(lists!==undefined){
+    return lists.slice(start)  
+  	}
   }
 })
 .controller("yan", ["$scope", "$http","$location","$cookieStore",function($scope, $http,$location,$cookieStore) {

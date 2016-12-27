@@ -1,6 +1,6 @@
 <div ng-controller="yan">
 	<ul class="list-group xia" id="xian" ng-repeat="a in data | paging:currentPage*listsPerPage | limitTo:listsPerPage">
-		<li class="list-group-item " ng-click="ck($index)">{{a}}</li><span class="badge glyphicon glyphicon-remove" ng-click="del(a,$index)" id="san"> </span><span class="badge glyphicon glyphicon-share" id="fen"></span> 
+		<li class="list-group-item " ng-click="ck($index)">{{a.id}}</li><span class="badge glyphicon glyphicon-remove" ng-click="del(a,$index)" id="san"> </span><span class="badge glyphicon glyphicon-share" id="fen"></span> 
 	</ul>
 	<div>
       <a class="step prevLink" ng-click="prevPage()">上一页</a>
