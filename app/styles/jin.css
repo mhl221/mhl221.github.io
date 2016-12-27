@@ -20,7 +20,10 @@ form{ margin-top: 0.8rem;}
 .one{ width: 100%; margin-left: 0.1rem;}
 
 
-#tu{ box-shadow: 0.2rem  green;}
+#tu{
+	box-shadow:0 0 2rem  green;
+border-bottom-right-radius:1.2rem;
+border-top-left-radius: 1.2rem;}
 
 .zhanweiq{ height: 0.85rem; line-height: 0.85rem; }
 .zhanweiq span{ float: left; margin-left: 0.5rem;}
@@ -38,6 +41,6 @@ form{ margin-top: 0.8rem;}
 
 .one s img{ position: absolute; float: left; margin-left: 7rem; margin-top: 0.7rem; width:0.5rem; height: 0.2rem;}
 
-iframe{ width: 13rem; overflow: hidden;}
+iframe{ width: 14rem; overflow: hidden;}
 #iframe-wrap{ height:2rem;}
 .btnn{ background:darkolivegreen;}

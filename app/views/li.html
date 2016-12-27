@@ -1,4 +1,4 @@
-<div class="li2" ng-controller="li">
+	<div class="li2" ng-controller="li">
    <div ng-repeat="x in data.option" class="nav2">
      <p>问题{{$index+1}}</p>
      <input type="text" placeholder="Enter email" ng-model="x.title" />
@@ -22,9 +22,10 @@
               <div class="bottopm" ng-click="tian($index)">添加问题</div>
          </div>
  <div class="btn2" class="btn btn-default glyphicon glyphicon-plus" ng-click="add()">
-      +   	
+      <span class="glyphicon glyphicon-plus"></span>  	
 </div>
   <div class="sca" ng-click="acs()">提交问卷</div>
 </div>
+
 
 
