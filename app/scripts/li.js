@@ -2,7 +2,11 @@ angular.module('rulerApp')
  .controller("li",["$scope","$http","$cookieStore",function($scope,$http,$cookieStore){
  	$scope.data = {"option":[],"title":""}
  	$scope.add = function(){
-		$scope.data.option.push({"title":"","opt":[{"op":"","num":0}],"type":"-1","top":[]})
+		$scope.data.option.push({"title":"","opt":[{"op":"","num":0}],"type":"","top":[]})
+		//alert(1)
+	}
+	$scope.cct = function(index){
+		$scope.data.option.splice(index,1)
 		//alert(1)
 	}
 	// if($scope.data.option.type == 0||2){
@@ -24,10 +28,8 @@ angular.module('rulerApp')
 		       $http({
 						url:"http://47.90.20.200:1602/item",
 						method: "post",
-						data:{"uid":$cookieStore.get('uid'),"option":$scope.data.option}
+						data:{"uid":$cookieStore.get('uid'),"option":$scope.data.option,"title":$scope.data.title}
 					}).then(function(e) {
-						
-						
 						console.log(e)
 			
 						/*if($scope.list.option) {

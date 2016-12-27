@@ -10,7 +10,15 @@
 	float: left;
 	margin-left: 1.5rem;
 }
+
 .nav2 input{
+	width: 80%;
+	height: 1rem;
+	float: left;
+	    color: #000;
+	clear: both;
+}
+.nav3 input{
 	width: 80%;
 	height: 1rem;
 	float: left;
@@ -60,9 +68,16 @@
 		line-height: 1rem;
 		margin-left: 5rem;
 	}
+
 	.sca{
 		position:fixed;
 		color: #fff;
 		right: 1.5rem;
 		bottom: 0.5rem;
 	}
+
+.ccvt{
+	float: right;
+	color:#fff;
+	padding-right: 2rem;
+}
