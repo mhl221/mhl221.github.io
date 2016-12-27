@@ -14,14 +14,14 @@ angular.module('rulerApp').filter('paging',function(){
 			console.log(e)
 			$scope.data = e.data;
 			$scope.dataNum =  $scope.data.length;  //获得数据总个数
-    $scope.pages = Math.ceil($scope.dataNum/3);         //按照每页显示3个数据，得到总页数
+    $scope.pages = Math.ceil($scope.dataNum/5);         //按照每页显示3个数据，得到总页数
     $scope.pageNum = [];                                //生成页码，在 html里 ng-repeat 出来
     for(var i=0;i<$scope.pages;i++){
       $scope.pageNum.push(i);
     }
 
     $scope.currentPage = 0;                       //设置当前页是 0
-    $scope.listsPerPage = 3;                      //设置每页显示 3 个
+    $scope.listsPerPage = 5;                      //设置每页显示 3 个
 
     $scope.setPage = function(num){             // 当点击页码数字时执行的函数
       $scope.currentPage = num;                 //将当前页 设置为 页码数
@@ -42,10 +42,12 @@ angular.module('rulerApp').filter('paging',function(){
 	
 	
 $scope.del = function(index) {
+		alert(index)
 			$scope.data.splice(index, 1)
+		
 		}
 $scope.ck = function(index) {
-	$location.path('/niez/' + index)
+//	$location.path('/niez/' + index)
 }
 
 }])
