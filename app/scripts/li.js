@@ -5,6 +5,10 @@ angular.module('rulerApp')
 		$scope.data.option.push({"title":"","opt":[{"op":"","num":0}],"type":"-1","top":[]})
 		//alert(1)
 	}
+	$scope.cct = function(index){
+		$scope.data.option.splice(index,1)
+		//alert(1)
+	}
 	// if($scope.data.option.type == 0||2){
              
 	// }else{

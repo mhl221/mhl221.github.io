@@ -10,6 +10,7 @@
 	float: left;
 	margin-left: 1.5rem;
 }
+
 .nav2 input{
 	width: 80%;
 	height: 1rem;
@@ -68,3 +69,8 @@
 		bottom: 0.5rem;
 	}
 
+.ccvt{
+	float: right;
+	color:#fff;
+	padding-right: 2rem;
+}
