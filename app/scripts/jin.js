@@ -19,11 +19,12 @@
             $("#text").val($("#inputPassword3").val());
         }
         	
- //  记住密码功能
+
         
 
 
-angular.module('rulerApp').controller("jin", ["$scope","$http","$location","$cookieStore",function($scope,$http,$location,$cookieStore) {
+angular.module('rulerApp').controller("jin", ["$scope","$http","$location","$cookieStore",function($scope,$http,$location,$cookieStore){
+	
 	$scope.btn = function(){
 		var use=inputEmail3.value;
 		var pwd=inputPassword3.value;
