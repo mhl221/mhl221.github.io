@@ -37,7 +37,7 @@ angular.module('rulerApp').controller("jin", ["$scope","$http","$location","$coo
 			console.log(e);	 
             
 		   if(use == e.config.data.username && pwd == e.config.data.password ){
-		  
+		      uid=e.data.uid;
 	          $cookieStore.put('uid',uid);
 		     $location.path('/gy');
 		   }else{
