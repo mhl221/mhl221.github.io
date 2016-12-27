@@ -45,7 +45,7 @@ $scope.del = function(index) {
 			$scope.data.splice(index, 1)
 		}
 $scope.ck = function(index) {
-	$location.path('/nie/' + index)
+	$location.path('/niez/' + index)
 }
 
 }])
