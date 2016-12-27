@@ -2,7 +2,7 @@
 
 	width: 100%;
 	position: relative;
-	
+	color: #fff;
 	float: left;
 }
 .nav2 input{
@@ -33,7 +33,7 @@
 	
 }
 .btn2{
-
+      color:#fff;
 	clear: both;
 	float: left;
 }
