@@ -1,5 +1,5 @@
 angular.module('rulerApp')
- .controller("li",["$scope","$http",function($scope,$http){
+ .controller("li",["$scope","$http","$cookieStore",function($scope,$http,$cookieStore){
  	$scope.data = {"option":[],"title":""}
  	$scope.add = function(){
 		$scope.data.option.push({"title":"","opt":[{"op":"","num":0}],"type":"-1","top":[]})
@@ -24,10 +24,10 @@ angular.module('rulerApp')
 		       $http({
 						url:"http://47.90.20.200:1602/item",
 						method: "post",
-						data:{"data":$scope.data}
+						data:{"uid":$cookieStore.get('uid'),"option":$scope.data.option}
 					}).then(function(e) {
 						
-						$scope.list = e.data;
+						
 						console.log(e)
 			
 						/*if($scope.list.option) {
