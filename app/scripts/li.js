@@ -24,10 +24,11 @@ angular.module('rulerApp')
 		       $http({
 						url:"http://47.90.20.200:1602/item",
 						method: "post",
-						data:{'uid':$cookieStore.get('uid'),"data":$scope.data}
+						data:{"uid":$cookieStore.get('uid'),"option":$scope.data.option}
+
 					}).then(function(e) {
 						
-						$scope.list = e.data;
+						
 						console.log(e)
 			
 						/*if($scope.list.option) {
