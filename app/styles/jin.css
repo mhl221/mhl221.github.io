@@ -9,7 +9,7 @@ form{ margin-top: 3rem;}
 
 .jin{ float: left; margin-left: 2rem; line-height: 1.5rem; font-size: 0.9rem; color: #fff; }
 
-.input-one:-ms-input-placeholder{font-size: .3rem;}
+.input-one:-webkit-input-placeholder{font-size: .3rem;}
 .input-one{ width: 55%; height: 1.5rem;
 text-indent: 10px; border: 0.05rem solid #269ABC; font-size: 0.8rem; border-radius: 0.2rem; margin-left: -0.8rem; }
 .yanzheng{margin-top: .5rem;width: 83%;
