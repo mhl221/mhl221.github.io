@@ -1,6 +1,7 @@
 .li2{
 	width: 100%; height: 100%;
 	 background: #ccc;
+
 }
 .nav2{
     
@@ -45,40 +46,41 @@
 	margin-top: 0.5rem;
 	margin-right: 0.2rem;
     color: #000;
-	
 }
 .btn2{
       color:#fff;
 	clear: both;
 	float: left;
 	margin-left:1rem;
+	margin-top: 0.5rem;
 }
 .inp{
 	width: 100%;
 	float: left;	
 }
-
 	.bottopm{
-		
 		width: 20%;
 		height: 5rem;
-	
-		
 		text-align: center;
-		
 		line-height: 1rem;
 		margin-left: 5rem;
 	}
-
 	.sca{
 		position:fixed;
 		color: #fff;
 		right: 1.5rem;
 		bottom: 0.5rem;
 	}
-
 .ccvt{
 	float: right;
 	color:#fff;
 	padding-right: 2rem;
+}
+.dib2{
+	position:fixed;
+	width: 100%;
+	height: 2rem;
+	
+	bottom: 0;
+
 }
