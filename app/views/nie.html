@@ -1,14 +1,14 @@
 <div ng-controller="nie">
 		<div class="row">
 			 <div class="col-sm-12">
-			    <img src="images/logoo.PNG">
+			    <img src="images/logoo.PNG" id="tuu">
 			 </div>
 		</div>
 		<form class="form-horizontal"  ng-submit='send(myForm.$valid)' name="myForm">
 		  
 		    <label for="inputEmail3" class="i control-label">用户名：</label>
 		   
-		      <input type="text" class="input-one_n"  ng-minlength='8' ng-maxlength='11' name="u_n" ng-model='updata.username' id="n_zh" >
+		      <input type="text" class="input-one_n" placeholder="请输入用户名" onfocus="placeholder=''" ng-minlength='8' ng-maxlength='11' name="u_n" ng-model='updata.username' id="n_zh" >
 		      <div class="zhanwei">
 		      	<span ng-messages="myForm.u_n.$error" id="zw">
 				<span ng-message="minlength" id="zw">☀用户名不可少于8位</span>
@@ -20,7 +20,7 @@
 		  <div class="pas">
 		    <label for="inputPassword3" class="mi i">密码：  </label>
 		    <div class="one">
-		      <input type="password" class="input-one_n" ng-minlength='8' ng-maxlength='11' name="u_nm" ng-model='updata.password' id="n_mm" required="">
+		      <input type="password" class="input-one_n" placeholder="请输入密码" onfocus="placeholder=''" ng-minlength='8' ng-maxlength='11' name="u_nm" ng-model='updata.password' id="n_mm" required="">
 		    </div>
 		  </div>
 		  <div class="zhanwei">
@@ -32,7 +32,7 @@
 		  <div class="pas">
 		    <label for="inputPassword3" class="mi i">确认密码：</label>
 		    <div class="one">
-		      <input type="password" class="input-one_n"ng-minlength='8' ng-maxlength='11' name="u_nmm"  id="n_cmm" required="">
+		      <input type="password" class="input-one_n"ng-minlength='8' placeholder="请确认密码" onfocus="placeholder=''" ng-maxlength='11' name="u_nmm"  id="n_cmm" required="">
 		      <!--<div class="zhanwei"></div>-->
 		    </div>
 		    <div class="zhanwei">
