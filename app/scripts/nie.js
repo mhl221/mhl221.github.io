@@ -1,4 +1,5 @@
-	document.documentElement.style.fontSize = document.documentElement.clientWidth/320*20+'px';
+
+document.documentElement.style.fontSize = document.documentElement.clientWidth/320*20+'px';
 		window.onresize = function(){
 			document.documentElement.style.fontSize = document.documentElement.clientWidth/320*20+'px';
 		};	
@@ -92,10 +93,12 @@
 
 var code ; //在全局 定义验证码
 function createCode(){ 
+	$('#checkCode').css("display",'block')
+	$('#look').text('看不清换一张')
 code = new Array();
 var codeLength = 4;//验证码的长度
 var checkCode = document.getElementById("checkCode");
-checkCode.value = "";
+$('#checkCode').val();
 
 var selectChar = new Array(2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','J','K','L','M','N','P','Q','R','S','T','U','V','W','X','Y','Z');
 
@@ -106,35 +109,38 @@ for(var i=0;i<codeLength;i++) {
 if(code.length != codeLength){
    createCode();
 }
-checkCode.value = code;
+/*checkCode.value = code;*/
+$('#checkCode').val(code)
 }
-
+var vv="";
 function validate () {
-var inputCode = document.getElementById("input1").value.toUpperCase();
+var inputCode = document.getElementById("name").value.toUpperCase();
 
 if(inputCode.length <=0) {
-   //alert("请输入验证码！");
-   return false;
+  // alert("请输入验证码！");
+  
 }
 else if(inputCode == code ){
   // alert("成功！");
-   a = 1;
-   console.log(a)
+   vv = 1;
+   console.log(vv)
    return true;
    
 }
 else {
- //  alert("验证码输入错误！");
+   //alert("验证码输入错误！");
    
 createCode();
-   return false;
+  
 }
 }
 
 
 angular.module('rulerApp')
 .controller("nie", ["$scope","$http",'$location',function($scope,$http,$location) {
+	
 	$scope.a=function(){
+
 		if(n_zh.value.length<8){
 			return;
 		}else if(n_zh.value.length>11){
@@ -143,17 +149,23 @@ angular.module('rulerApp')
 			zww.value='☀密码不相同位'
 			return;
 		}else{
-$http({
+			
+        $http({
 			url:"http://47.90.20.200:1602/users",
 			method: "post",
 			data:$scope.updata
 		}).then(function(e) {
 	//		$scope.n_dc = e.data
-			console.log(e)
+	       if(vv == 1){
+	       	console.log(e)
 			$location.path('/jin')
-		}, function() {
+	       }else{
+	       	alert(2)
+	       }
+		}, function(e) {
 	
 		})
+		
 		}
 		
 	}

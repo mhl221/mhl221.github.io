@@ -36,7 +36,8 @@ border-top-left-radius: 1.2rem;}
 .btnn{  width: 75%; height: 1.5rem; font-size: 0.8rem; border-radius: 0.2rem; font-family: "微软雅黑"; color: red; box-shadow: 0.1rem solid red;}
 .btnn a{ color: #fff;}
 .bateiq{ width: 100%; height: 2.5rem; float: left; margin-top: 1.5rem;}
-.neww{ font-size: 0.5rem; margin-left: -9rem; font-family: "微软雅黑"; color: #ccc; margin-top: 0.2rem;}
+.neww{ width: 5rem; font-size: 0.5rem;  font-family: "微软雅黑"; color: #ccc; margin-top: 0.8rem;
+ margin-left: 1.2rem;}
 .pas{ margin-top: 0.3rem;}
 
 .checkbox{ width: 7rem; height: 1rem; float: left; margin-top: 2rem;}
@@ -48,3 +49,13 @@ border-top-left-radius: 1.2rem;}
 iframe{ width: 14rem; overflow: hidden;}
 #iframe-wrap{ height:2rem;}
 .btnn{ background:darkolivegreen;}
+.xiu{ width: 4rem; float: left; color: #fff;  font-size: 0.678rem; margin-left: 2rem;  line-height: 1.3rem;}
+#myModal{ background: url(../images/bj.jpg);  }
+.shuru{ width: 100%; height: 100%;}
+.modal-header{ height: 100%; }
+#names{  }
+.btn1{ color: #000; }
+.btn2{ color: #000; }
+.bao{ margin-top: 1rem; margin-left: -1.2rem; }
+.btnnn{  width: 85%; height: 1.5rem; font-size: 0.8rem; border-radius: 0.2rem; font-family: "微软雅黑"; color: #fff; margin-left: 1.4rem; margin-top: 3.1rem; background: green;}
+.jinq{ width: 4.5rem; text-align: left; float: left; margin-left: 2rem; line-height: 1.5rem; font-size: 0.9rem; color: #fff;  }

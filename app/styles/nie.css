@@ -25,11 +25,7 @@ form{ margin-top: 0.8rem;}
 			line-height: 1rem;
 			margin: 0 auto;
 	}
-#canvas{    width: 3.5rem;
-	       height: 1.4rem;
-			float: left;
-			margin-left: 1.275rem;
-		}
+
 #name{
 	width: 3rem;
 	height: 1.5rem;
@@ -75,6 +71,7 @@ border:0;
 padding:2px 3px;
 letter-spacing:3px;
 font-weight:bolder;
+display: none;
 }
 .unchanged {
 border:0;
@@ -82,6 +79,8 @@ border:0;
 #checkCode{ width: 3.5rem;
 	       height: 1.4rem;
 			float: left;
-
+           background: url(../images/yan.jpg);
+           background-size: 100%;
+           color: #fff;
 			margin-left: 1.275rem; }
-#look{ color: BLUE; font-size: 0.5rem; margin-left: 1.1rem;}
+#look{ color: #fff; font-size: 0.5rem; margin-left: 1.1rem;}
