@@ -69,7 +69,7 @@ angular.module('rulerApp').controller("jin", ["$scope","$http","$location","$coo
 
 $scope.xiu = function(){
 		
-		var id = $cookieStore.get("id");
+		var id = $cookieStore.get("uid");
 		var musername = $cookieStore.get('username')
 		//console.log(id)
 		console.log(musername)
