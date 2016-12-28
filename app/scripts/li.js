@@ -4,6 +4,9 @@ angular.module('rulerApp')
  	$scope.add = function(){
 		$scope.data.option.push({"title":"","opt":[{"op":"","num":0}],"type":"","top":[]})
 		//alert(1)
+		$('#full').css('display','none')
+		$('#tit').css('opacity','1')
+		$('#tit').css('transition','1s all ease')
 	}
 	$scope.cct = function(index){
 		$scope.data.option.splice(index,1)
