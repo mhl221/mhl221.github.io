@@ -1,33 +1,40 @@
 	<div class="li2" ng-controller="li">
-  <div class="nav3"><input type="text" ng-model="data.title"/></div>
+  <div class="nav3"><input type="text" ng-model="data.title" id="tit"/></div>
    <div ng-repeat="x in data.option" class="nav2">
      <p>问题{{$index+1}}<span class="ccvt" ng-click="cct($index)">删除</span></p>
      <input type="text" placeholder="Enter email" ng-model="x.title" />
-  
          <p class="pip">问题类型</p>
          <p class="p2">
-         	 <input type="radio" ng-model="x.type" value="2"/>填空
-       												
+         	 <input type="radio" checked="checked" ng-model="x.type" value="2"/>填空									
          </p>
          <p class="p2">
-         	 <input type="radio" ng-model="x.type" value="1"/>多选
+         	 <input type="radio" checked="checked" ng-model="x.type" value="1"/>多选
          </p>
          <p class="p2">
-         	 <input type="radio" ng-model="x.type" value="0"/>单选
+         	 <input type="radio" checked="checked" ng-model="x.type" value="0"/>单选
          </p>    <p class="p2">    
 
-         	 <input type="radio" ng-model="x.type" value="3"/>简答
+         	 <input type="radio" checked="checked" ng-model="x.type" value="3"/>简答
          </p>
           <div class="inp" ng-repeat="y in x.top">
             <input type="text" placeholder="Enter email" ng-model="y.value"/><span ng-click="brn($parent.$index,$index)">删除</span>
           </div>
               <div class="bottopm" ng-click="tian($index)">添加问题</div>
          </div>
- <div class="btn2" class="btn btn-default glyphicon glyphicon-plus" ng-click="add()">
-      <span class="glyphicon glyphicon-plus"></span>  	
+
+
+
+          <div id="full">
+              暂无数据，请添加...
+          </div>
+<div class="dib2">
+    <div class="btn2" class="btn btn-default glyphicon glyphicon-plus" ng-click="add()">
+          <span class="glyphicon glyphicon-plus"></span>    
+    </div> 
+       <div class="sca" ng-click="acs()">提交问卷</div>
+     </div>
 </div>
-  <div class="sca" ng-click="acs()" ui-sref="gy">提交问卷</div>
-</div>
+ 
 
 
 
