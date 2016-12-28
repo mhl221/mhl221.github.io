@@ -1,8 +1,13 @@
 <div ng-controller="yan">
+
 	<ul class="list-group xia" id="xian" ng-repeat="x in data | filter:sss | fy:page:10"  >
 		<li class="list-group-item " ui-sref="niez({id:t.id})">{{x.title}}</li>
 		<span class="badge glyphicon glyphicon-remove" ng-click="del(x)" id="san">			
 		</span><span class="badge glyphicon glyphicon-share" id="fen"></span> 
+
+	<ul class="list-group xia" id="xian" ng-repeat="a in data | paging:currentPage*listsPerPage | limitTo:listsPerPage">
+		<li class="list-group-item " ui-sref="miao" ng-click="ck($index)">{{a.id}}</li><span class="badge glyphicon glyphicon-remove" ng-click="del(a,$index)" id="san"> </span><span class="badge glyphicon glyphicon-share" id="fen"></span> 
+
 	</ul>
 	<div class="ding">
       <a class="step prevLink" ng-click="prev()">上一页</a>
