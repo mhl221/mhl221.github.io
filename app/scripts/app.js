@@ -24,7 +24,7 @@ angular
       }).state("miao",{
         url:"/miao",
         templateUrl:"views/miao.html",
-      controller:"miao"
+      	controller:"miao"
       }).state("gy.li",{
         url:"/li",
         templateUrl:"views/li.html",
