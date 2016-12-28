@@ -6,17 +6,17 @@
   
          <p class="pip">问题类型</p>
          <p class="p2">
-         	 <input type="radio" ng-model="x.type" value="2"/>填空
+         	 <input type="radio" checked="checked" ng-model="x.type" value="2"/>填空
        												
          </p>
          <p class="p2">
-         	 <input type="radio" ng-model="x.type" value="1"/>多选
+         	 <input type="radio" checked="checked" ng-model="x.type" value="1"/>多选
          </p>
          <p class="p2">
-         	 <input type="radio" ng-model="x.type" value="0"/>单选
+         	 <input type="radio" checked="checked" ng-model="x.type" value="0"/>单选
          </p>    <p class="p2">    
 
-         	 <input type="radio" ng-model="x.type" value="3"/>简答
+         	 <input type="radio" checked="checked" ng-model="x.type" value="3"/>简答
          </p>
           <div class="inp" ng-repeat="y in x.top">
             <input type="text" placeholder="Enter email" ng-model="y.value"/><span ng-click="brn($parent.$index,$index)">删除</span>
