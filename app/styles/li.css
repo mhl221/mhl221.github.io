@@ -3,6 +3,11 @@
 	 background: #ccc;
 
 }
+input{
+	text-indent: 0.3rem;
+	border-radius:0.3rem; 
+	outline: none;
+}
 .nav2{
     
 	width: 100%;
@@ -14,17 +19,18 @@
 
 .nav2 input{
 	width: 80%;
-	height: 1rem;
+	height: 1.2rem;
 	float: left;
 	    color: #000;
 	clear: both;
 }
 .nav3 input{
 	width: 80%;
-	height: 1rem;
+	height: 1.2rem;
 	float: left;
 	    color: #000;
 	    margin-left: 1.5rem;
+	    opacity: 0;
 	clear: both;
 }
 .pip{
@@ -57,7 +63,9 @@
 .inp{
 	width: 100%;
 	float: left;	
+	margin-top:0.2rem;
 }
+
 	.bottopm{
 		width: 20%;
 		height: 5rem;
@@ -83,4 +91,12 @@
 	
 	bottom: 0;
 
+}
+#full{
+	position:absolute;
+	top: 50%;
+	left:15%;
+	color: #fff;
+	font-size: 1.3rem;
+	opacity: 1;
 }
