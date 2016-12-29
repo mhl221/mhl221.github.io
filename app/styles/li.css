@@ -26,7 +26,7 @@ input{
 }
 .nav3 input{
 	width: 80%;
-	height: 1.2rem;
+	height: 1.5rem;
 	float: left;
 	    color: #000;
 	    margin-left: 1.5rem;
@@ -82,7 +82,7 @@ input{
 .ccvt{
 	float: right;
 	color:#fff;
-	padding-right: 2rem;
+	padding-right:3.2rem;
 }
 .dib2{
 	position:fixed;
