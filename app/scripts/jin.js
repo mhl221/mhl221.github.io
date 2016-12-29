@@ -39,7 +39,7 @@ angular.module('rulerApp').controller("jin", ["$scope","$http","$location","$coo
 		}).then(function(e){
 			/*console.log(e.config.data.username)
 			console.log(e.data.id);	*/
-			
+			console.log(e)
             $cookieStore.put('id',e.data.id)
             $cookieStore.put('username',e.config.data.username)
 		   if(use == e.config.data.username && pwd == e.config.data.password){
@@ -72,19 +72,23 @@ $scope.xiu = function(){
 		var id = $cookieStore.get("uid");
 		var musername = $cookieStore.get('username')
 		//console.log(id)
-		console.log(musername)
+		//console.log(musername)
 		$http({
-			url:"http://surveytime.cn:1602/users/"+id,
+			url:"http://47.90.20.200:1602/users/"+id,
 			method: "put",
 			data:{'username':musername,'password':$scope.password}
 		}).then(function(e){
 			console.log(e)
-//			if(inputPassword3qq.value==inputPassword3q.value){
-//			   
-//			
-//			}else{
-//			
-//			}
+			if(inputPassword3qq.value==inputPassword3q.value){
+			//	console.log(e.config.data.password)
+				 password = e.config.data.password;
+				 
+				// $cookieStore.remove('password');
+			   $cookieStore.put('password',password);
+			  alert('修改成功')
+			}else{
+			
+			}
 		},function(e){
 			
 		})

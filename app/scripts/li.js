@@ -16,6 +16,7 @@ angular.module('rulerApp')
 					"top": []
 				})
 				//alert(1)
+			
 		}
 		$scope.cct = function(index) {
 				$scope.data.option.splice(index, 1)
