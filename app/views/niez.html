@@ -1,21 +1,26 @@
 <div ng-controller="niez">
-	<div class="fb_hz">
-		<h1>{{ww.title}}</h1>
-		<p>{{ww.option.title}}</p>
-		<textarea ng-show='bf' id="n_tk"></textarea>
+	<h1 class="h_h">{{ww.title}}</h1>
+	<div class="fb_hz" ng-repeat='n in ww.option'>
+		
+		<p class="t_t">{{$index+1}}.{{n.title}}</p>
+		<textarea ng-show='bf' id="n_tk" ></textarea>
 		<div class="radio" ng-repeat='n in ww.option' ng-show='bff'>
 		  <label>
 		    <input type="radio" >
-		    {{n.top.value}}
+		    {{n.value}}
 		  </label>
 		</div>
-		<!--<div>
-			<input type="radio" name="n"  ng-show='bff' ng-repeat='n in ww[31].option[0].top'/>
-			<p ng-repeat='ww[31].option[0].top in top.value'></p>
-		</div>-->
-		<input type="radio" ng-show='bfff'/>
+		
+		<div class="radio" ng-repeat='n in ww.option' ng-show='bfff'>
+		  <label ng-repeat='x in n.opt'>
+		    <input type="radio" name="tong" >
+		    {{x.value}}
+		  </label>
+		</div>
+		
 		<div id="n_zwf" ng-show='bffff'>
-			<summernote config="options"></summernote>
+			<summernote config="options" class='fwb'></summernote>
 		</div>
 	</div>
+	<div class="n_b"  ng-click='n_tj()'>提交</div>
 </div>
