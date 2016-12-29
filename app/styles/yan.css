@@ -1,35 +1,74 @@
-#xian li:hover{background: #ccc;}
-#xian #fen{display: block;width: 26px;height: 18px;float: right;margin-top: -30px;margin-right: 50px;}
-#xian  span{cursor: pointer;}
-#san{z-index: 10;float: right;margin-top: -30px;margin-right: 10px;}
-#xian #fan{margin-right: 50px;}
-.list-group{margin-bottom: 10px;}
-#xian li{height: 40px;}
-div span a{float: left; line-height: 24px;
-    height: 24px;border: solid 1px #aaa;
-    color: #999;cursor: pointer; background: #f2f2f2; border: solid 1px #aaa;
-    color: #999;
-    width: 20px;
-    text-align: center;
-    margin: 0 0 0 5px;
+#xian{
+	position: relative;
+	z-index: 0;
 }
-.nextLink,.prevLink{
-    font-size: 12px;
-      line-height: 24px;
-    height: 24px;
-    border: solid 1px #aaa;
-    color: #999;
-    padding: 0 9px;
-    margin: 0 0 0 5px;
-    list-style: none;
-    background: #f2f2f2;
-    float: left;
-    cursor: pointer;
+#xian li:hover {
+	background: #ccc;
 }
 
-a.prevLink:hover,a.nextLink:hover ,div span:hover{
-    background: #aaa !important;
-    color: #fff !important;
-    cursor: pointer;
+
+
+#xian .yuan{
+	border-radius:4px;
 }
 
+#xian span {
+	cursor: pointer;
+}
+
+#san {
+	z-index: 10;
+	float: right;
+	margin-top: -30px;
+	margin-right: 10px;
+}
+
+#xian #fan {
+	margin-right: 50px;
+}
+
+.list-group {
+	margin-bottom: 10px;
+}
+
+#xian li {
+	height: 40px;
+}
+
+div span a {
+	float: left;
+	line-height: 24px;
+	height: 24px;
+	border: solid 1px #aaa;
+	color: #999;
+	cursor: pointer;
+	background: #f2f2f2;
+	border: solid 1px #aaa;
+	color: #999;
+	width: 20px;
+	text-align: center;
+	margin: 0 0 0 5px;
+}
+
+.nextLink,
+.prevLink {
+	font-size: 12px;
+	line-height: 24px;
+	height: 24px;
+	border: solid 1px #aaa;
+	color: #999;
+	padding: 0 9px;
+	margin: 0 0 0 5px;
+	list-style: none;
+	background: #f2f2f2;
+	float: left;
+	cursor: pointer;
+}
+
+a.prevLink:hover,
+a.nextLink:hover,
+div span:hover {
+	background: #aaa !important;
+	color: #fff !important;
+	cursor: pointer;
+}

@@ -51,6 +51,7 @@ angular.module('rulerApp').filter('fy', function() {
 			url: "http://47.90.20.200:1602/item/" + e.id,
 			method: "delete"
 		}).then(function() {
+			alert(1)
 			$scope.data.splice($scope.data.indexOf(e), 1)
 
 			$http({
@@ -91,5 +92,5 @@ angular.module('rulerApp').filter('fy', function() {
 
 		}, function() {})
 	}
-
+	
 }])
