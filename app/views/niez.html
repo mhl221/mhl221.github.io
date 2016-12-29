@@ -1,3 +1,21 @@
 <div ng-controller="niez">
-	<summernote config="options"></summernote>
+	<div class="fb_hz">
+		<h1>{{ww.title}}</h1>
+		<p>{{ww.option.title}}</p>
+		<textarea ng-show='bf' id="n_tk"></textarea>
+		<div class="radio" ng-repeat='n in ww.option' ng-show='bff'>
+		  <label>
+		    <input type="radio" >
+		    {{n.top.value}}
+		  </label>
+		</div>
+		<!--<div>
+			<input type="radio" name="n"  ng-show='bff' ng-repeat='n in ww[31].option[0].top'/>
+			<p ng-repeat='ww[31].option[0].top in top.value'></p>
+		</div>-->
+		<input type="radio" ng-show='bfff'/>
+		<div id="n_zwf" ng-show='bffff'>
+			<summernote config="options"></summernote>
+		</div>
+	</div>
 </div>
