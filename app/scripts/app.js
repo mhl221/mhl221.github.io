@@ -42,7 +42,7 @@ angular
         templateUrl:"views/nie.html",
 //      controller:"nie"
       }).state("niez",{
-        url:"/niez",
+        url:"/niez/:id",
         templateUrl:"views/niez.html"
       }).state("404",{
         url:"/404",

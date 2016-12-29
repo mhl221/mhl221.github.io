@@ -1,5 +1,6 @@
 angular.module('rulerApp')
-.controller("niez", ["$scope","$http",'$location',function($scope,$http,$location) {
+.controller("niez", ["$scope","$http",'$location','$stateParams',function($scope,$http,$location,$stateParams) {
+	alert($stateParams.id)
 	$http({
 		url:"http://47.90.20.200:1602/item",
 		method: "get",
