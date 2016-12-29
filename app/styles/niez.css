@@ -1,7 +1,8 @@
 *{ margin: 0; padding: 0; list-style: none;}
-.h_h{color: #fff;font-weight: bold;text-align: center;line-height: 4rem;}
+.h_h{color: #fff;font-weight: bold;text-align: center;}
 .fb_hz{width: 14rem;margin: 0 auto;overflow: hidden;}
 .t_t{color: #fff;font-size: 20px;}
 textarea{width: 15rem;height: 3rem;}
 .n_b{color: #fff;position: fixed;bottom: .5rem;right: .5rem;font-size: 25px;text-align: center;}
 .note-editor{height: 100px;}
+.hd{color: #fff;}

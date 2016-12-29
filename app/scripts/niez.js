@@ -37,10 +37,23 @@ angular.module('rulerApp')
             ['help', ['help']]
         ]
   };
-  $scope.n_tj=function(){
-  	var bb= n_tk.value;
-  	$scope.data = {"option":"opt","op":"","title":""}
-  	
-  	alert(bb)
-  }
+  
+ 	$scope.dj=function(a){
+ 		var aaa;
+ 		if(a){
+ 			
+ 			aaa=1;
+ 		}
+ 		$cookieStore.put('top',aaa)
+ 		
+ 	}
+// 	$scope.dd=function(a){
+// 		var ddd;
+// 		if(a){
+// 			
+// 			ddd=1
+// 		}
+// 		$cookieStore.put('top',ddd)
+// 		
+// 	}
 }])

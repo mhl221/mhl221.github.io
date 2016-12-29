@@ -5,14 +5,14 @@
 		<p class="t_t">{{$index+1}}.{{n.title}}</p>
 		<textarea ng-show='bf' id="n_tk" ></textarea>
 		<div class="radio" ng-repeat='n in ww.option' ng-show='bff'>
-		  <label>
+		  <label ng-repeat='x in n.top' style="margin-right: 80%;" class="hd" ng-click="dd(x.value)">
 		    <input type="radio" >
-		    {{n.value}}
+		    {{x.value}}
 		  </label>
 		</div>
 		
 		<div class="radio" ng-repeat='n in ww.option' ng-show='bfff'>
-		  <label ng-repeat='x in n.opt'>
+		  <label ng-repeat='x in n.top' style="margin-right: 80%;" class="hd" ng-click="dj(x.value)">
 		    <input type="radio" name="tong" >
 		    {{x.value}}
 		  </label>
@@ -22,5 +22,5 @@
 			<summernote config="options" class='fwb'></summernote>
 		</div>
 	</div>
-	<div class="n_b"  ng-click='n_tj()'>提交</div>
+	<div class="n_b" ui-sref="miao" ng-click='n_tj()'>提交</div>
 </div>
