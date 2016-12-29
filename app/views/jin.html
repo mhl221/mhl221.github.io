@@ -22,8 +22,13 @@
 		       <div class="zhanweiq"></div>
 		    </div>
 		  </div>
+<<<<<<< HEAD
 		    <iframe src="http://www.jq22.com/demo/jQuery-slide20161116" frameborder="0" width="100%" class="yanzheng" ng-click="y()">
             </iframe>
+=======
+		    <iframe  src="http://www.jq22.com/demo/jQuery-slide20161116" frameborder="0" width="100%" class="yanzheng" id="yanzheng">
+        </iframe>
+>>>>>>> origin/master
 		  <div class="zhanweiq"></div>
 	      <div class="checkbox">
 	          	 <input type="checkbox">
@@ -83,5 +88,10 @@
 		  </div>
 		</form>
 	</div>
-
+<script type="text/javascript">
+2     window.onload=function(){
+3         var test=document.getElementById("demo").contentWindow.document.getElementById("yanzheng");
+5         console.log(test.ownerDocument.getElementsByTagName("P")[0].innerHTML);
+8     }        
+9 </script>
 	  

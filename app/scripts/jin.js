@@ -30,13 +30,17 @@ angular.module('rulerApp').controller("jin", ["$scope","$http","$location","$coo
 
 		var use=inputEmail3.value;
 		var pwd=inputPassword3.value;
+<<<<<<< HEAD
         
 		console.log(use+pwd);
+=======
+>>>>>>> origin/master
 		$http({
 			url:"http://47.90.20.200:1602/users/login",
 			method: "post",
 			data:{'username':use,'password':pwd}
 		}).then(function(e){
+<<<<<<< HEAD
 			/*console.log(e.config.data.username)
 			console.log(e.data.id);	*/
 			console.log(e)
@@ -49,6 +53,17 @@ angular.module('rulerApp').controller("jin", ["$scope","$http","$location","$coo
 	          $cookieStore.put('uid',uid);
 		     $location.path('/gy');
 		   /*  }*/
+=======
+			console.log(e);	 
+           
+		   if(use == e.config.data.username && pwd == e.config.data.password){
+		   		                       
+		   			 uid=e.data.uid;
+	          $cookieStore.put('uid',uid);
+		     $location.path('/gy');
+		   		
+		     
+>>>>>>> origin/master
 		   }else{
 		 
 		   }
