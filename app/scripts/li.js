@@ -1,6 +1,4 @@
 angular.module('rulerApp')
-<<<<<<< HEAD
-
 	.controller("li", ["$scope", "$http", "$cookieStore", function($scope, $http, $cookieStore) {
 		$scope.data = {
 			"option": [],
@@ -56,8 +54,6 @@ angular.module('rulerApp')
 
 				/*if($scope.list.option) {
 
-=======
->>>>>>> origin/master
  .controller("li",["$scope","$http","$cookieStore","$location",function($scope,$http,$cookieStore,$location){
  	$scope.data = {"option":[],"title":""}
  	$scope.add = function(){
@@ -95,43 +91,43 @@ angular.module('rulerApp')
 					}).then(function(e) {
 						console.log(e)
 							  $location.path('/gy');
-					// 	if($scope.list.option) {
+						/*if($scope.list.option) {
 
-					// 		for(var j = 0; j < $scope.list.option.length; j++) {
-					// 			if($scope.list.option[j].type == 0) { // 单选题
-					// 				alert(1)
-					// 				$scope.rad.push($scope.list.option[j])
-					// 			} else if($scope.list.option[j].type == 1) { //多选题
-					// 				alert(1)
-					// 				$scope.box.push($scope.list.option[j])
-					// 			} else if($scope.list.option[j].type == 2) { //填空题
-					// 				alert(1)
-					// 				$scope.tex.push($scope.list.option[j])
-					// 			} else { //问答题
-					// 				alert(1)
-					// 				$scope.arear.push($scope.allData.option[j])
-					// 			}
-					// 		}
-					// 	}
-					// 	$("#back").click(function() {
-					// 		$scope.bg = true;
-					// 		$("#box").css('display', "block");
-					// 		$("#xiangxi").css('display', "none");
-					// 		$scope.tex = [];
-					// 		$scope.rad = [];
-					// 		$scope.box = [];
-					// 		$scope.arear = [];
-					// 	})
+							for(var j = 0; j < $scope.list.option.length; j++) {
+								if($scope.list.option[j].type == 0) { // 单选题
+									alert(1)
+									$scope.rad.push($scope.list.option[j])
+								} else if($scope.list.option[j].type == 1) { //多选题
+									alert(1)
+									$scope.box.push($scope.list.option[j])
+								} else if($scope.list.option[j].type == 2) { //填空题
+									alert(1)
+									$scope.tex.push($scope.list.option[j])
+								} else { //问答题
+									alert(1)
+									$scope.arear.push($scope.allData.option[j])
+								}
+							}
+						}
+						$("#back").click(function() {
+							$scope.bg = true;
+							$("#box").css('display', "block");
+							$("#xiangxi").css('display', "none");
+							$scope.tex = [];
+							$scope.rad = [];
+							$scope.box = [];
+							$scope.arear = [];
+						})
 					
-					// if($scope.bg) {
-					// 	$("#box").css('display', "none");
-					// 	$("#xiangxi").css('display', "block");
-					// 	$scope.bg = false;
-					// } else {
-					// 	$("#box").css('display', "block");
-					// 	$("#xiangxi").css('display', "none");
-					// 	$scope.bg = true;
-					// }
+					if($scope.bg) {
+						$("#box").css('display', "none");
+						$("#xiangxi").css('display', "block");
+						$scope.bg = false;
+					} else {
+						$("#box").css('display', "block");
+						$("#xiangxi").css('display', "none");
+						$scope.bg = true;
+					}*/
 			}, function(e) {})
 
 		}

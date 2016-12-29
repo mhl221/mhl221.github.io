@@ -123,13 +123,13 @@ if(inputCode.length <=0) {
 else if(inputCode == code ){
   // alert("成功！");
    vv = 1;
-   console.log(vv)
+  // console.log(vv)
    return true;
    
 }
 else {
-   //alert("验证码输入错误！");
-   
+  //alert("验证码输入错误！");
+  $('#name').val('')
 createCode();
   
 }
@@ -137,7 +137,7 @@ createCode();
 
 
 angular.module('rulerApp')
-.controller("nie", ["$scope","$http",'$location',function($scope,$http,$location) {
+.controller("nie", ["$scope","$http","$location","$cookieStore",function($scope,$http,$location,$cookieStore) {
 	
 	$scope.a=function(){
 
@@ -146,7 +146,8 @@ angular.module('rulerApp')
 		}else if(n_zh.value.length>11){
 			return;
 		}else if(n_cmm.value!==n_mm.value){
-			zww.value='☀密码不相同位'
+			zww.innerHTML='☀密码不相同位'
+		
 			return;
 		}else{
 			
@@ -155,9 +156,11 @@ angular.module('rulerApp')
 			method: "post",
 			data:$scope.updata
 		}).then(function(e) {
+			console.log(e.config.data.password)
 	//		$scope.n_dc = e.data
 	       if(vv == 1){
 	       	console.log(e)
+
 			$location.path('/jin')
 	       }else{
 	       	alert(2)

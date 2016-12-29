@@ -50,7 +50,7 @@ border-top-left-radius: 1.2rem;}
 	font-size: 0.5rem;
 }
 #zw{  font-family: "微软雅黑"; color: red; font-size: 0.5rem;margin-left: -1rem;}
-#zww{  font-family: "微软雅黑"; color: red; font-size: 0.5rem;margin-left: -1rem;}
+#zww{ width: 10rem; height: 1rem; text-align: left;  display: block; font-family: "微软雅黑"; color: red; font-size: 0.5rem;margin-left: 4rem;}
 #zwww{  font-family: "微软雅黑"; color: red; font-size: 0.5rem;margin-left: -1rem;}
 .zhanwei{ height: 0.85rem; line-height: 0.85rem; }
 .form-group{ margin-bottom: 0px;}

@@ -17,22 +17,23 @@
 		    <label for="inputPassword3" class="jin mi">密&nbsp;  &nbsp;码  </label>
 		    <div class="one">
 		    	<s onclick="showHidePassword()"><img src="images/yan.png"></s>
-		       <input type="password" class="input-one" id="inputPassword3" placeholder="请输入密码..." onfocus="placeholder=''" required="" onblur="passwordBlur()" />
+		       <input type="password" class="input-one" id="inputPassword3" placeholder="请输入密码..." onfocus="placeholder=''" required="" onblur="passwordBlur()" ng-model="mima" />
                <input type="text"  class="input-one" id="text" style="display:none" onblur="textBlur()"/>
+               
 		       <div class="zhanweiq"></div>
 		    </div>
+		    <span class="cha glyphicon glyphicon-remove" ng-show="isShow"></span>
+		    
 		  </div>
-<<<<<<< HEAD
-		    <iframe src="http://www.jq22.com/demo/jQuery-slide20161116" frameborder="0" width="100%" class="yanzheng" ng-click="y()">
-            </iframe>
-=======
-		    <iframe  src="http://www.jq22.com/demo/jQuery-slide20161116" frameborder="0" width="100%" class="yanzheng" id="yanzheng">
-        </iframe>
->>>>>>> origin/master
+
+		   
+		 <!--   <iframe  src="http://www.jq22.com/demo/jQuery-slide20161116" frameborder="0" width="100%" class="yanzheng" id="yanzheng">
+        </iframe>-->
+
 		  <div class="zhanweiq"></div>
 	      <div class="checkbox">
-	          	 <input type="checkbox">
-	          	<p>记住密码</p>
+	          	 <input type="checkbox" class="jb-jizhu" ng-checked="jinbo" ng-click="jizhu()" index="false">
+	          	<p ng-click="jizhu1()">记住密码</p>
 	      </div>
 	      <div class="xiu"  data-toggle="modal" data-target="#myModal">
 	      	  忘记密码？
@@ -88,10 +89,5 @@
 		  </div>
 		</form>
 	</div>
-<script type="text/javascript">
-2     window.onload=function(){
-3         var test=document.getElementById("demo").contentWindow.document.getElementById("yanzheng");
-5         console.log(test.ownerDocument.getElementsByTagName("P")[0].innerHTML);
-8     }        
-9 </script>
+
 	  
