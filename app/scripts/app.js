@@ -22,7 +22,7 @@ angular
         templateUrl:"views/gy.html",
 //      controller:"gy"
       }).state("miao",{
-        url:"/miao",
+        url:"/miao/:id",
         templateUrl:"views/miao.html",
       	controller:"miao"
       }).state("gy.li",{
@@ -42,7 +42,7 @@ angular
         templateUrl:"views/nie.html",
 //      controller:"nie"
       }).state("niez",{
-        url:"/niez",
+        url:"/niez/:id",
         templateUrl:"views/niez.html"
       }).state("404",{
         url:"/404",

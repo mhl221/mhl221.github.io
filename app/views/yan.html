@@ -1,7 +1,7 @@
 <div ng-controller="yan">
 
-	<ul class="list-group xia" id="xian" ng-repeat="x in data | filter:sss | fy:page:10"  >
-		<li class="list-group-item " ui-sref="niez({id:t.id})">{{x.title}}</li>
+	<ul class="list-group xia" id="xian" ng-repeat="x in data | filter:sss | fy:page:10"  ui-sref="niez({id:x.id})" >
+		<li class="list-group-item  ">{{x.title}}</li>
 		<span class="badge glyphicon glyphicon-remove" ng-click="del(x)" id="san">			
 		</span><span class="badge glyphicon glyphicon-share" id="fen"></span> 
 
