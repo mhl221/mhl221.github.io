@@ -1,3 +1,26 @@
 <div ng-controller="niez">
-	<summernote config="options"></summernote>
+	<h1 class="h_h">{{ww.title}}</h1>
+	<div class="fb_hz" ng-repeat='n in ww.option'>
+		
+		<p class="t_t">{{$index+1}}.{{n.title}}</p>
+		<textarea ng-show='bf' id="n_tk" ></textarea>
+		<div class="radio" ng-repeat='n in ww.option' ng-show='bff'>
+		  <label ng-repeat='x in n.top' style="margin-right: 80%;" class="hd" ng-click="dd(x.value)">
+		    <input type="radio" >
+		    {{x.value}}
+		  </label>
+		</div>
+		
+		<div class="radio" ng-repeat='n in ww.option' ng-show='bfff'>
+		  <label ng-repeat='x in n.top' style="margin-right: 80%;" class="hd" ng-click="dj(x.value)">
+		    <input type="radio" name="tong" >
+		    {{x.value}}
+		  </label>
+		</div>
+		
+		<div id="n_zwf" ng-show='bffff'>
+			<summernote config="options" class='fwb'></summernote>
+		</div>
+	</div>
+	<div class="n_b" ui-sref="miao" ng-click='n_tj()'>提交</div>
 </div>

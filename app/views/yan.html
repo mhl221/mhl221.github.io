@@ -1,13 +1,13 @@
 <div ng-controller="yan">
+
 	<ul class="list-group xia" id="xian" ng-repeat="x in data | filter:sss | fy:page:10"  >
-		<li class="list-group-item yuan" ui-sref="niez({id:x.id})">{{x.title}}</li>
-		<span class="badge glyphicon glyphicon-remove" ng-click="del(x)" id="san">			
-		</span>
+		<li class="list-group-item yuan" ui-sref="niez({id:x.id})">{{x.title}}</li>	
+		<span class="badge glyphicon glyphicon-remove" ng-click="del(x)" id="san"></span>
 	</ul>
 
 	<div class="ding">
       <a class="step prevLink" ng-click="prev()">上一页</a>
-     <span ng-repeat="x in arr"><a ng-click="pages($index)">{{$index+1}}</a></span>
+     <span  ng-class="{true:'currentStep',false:'step'}[x==currentPage]" ng-repeat="x in arr"><a ng-click="pages(x)">{{x+1}}</a></span>
       <a class="step nextLink" ng-click="next()">下一页</a>
     </div>
 </div>

@@ -16,6 +16,7 @@ angular.module('rulerApp').filter('fy', function() {
 		}
 		
 	}).then(function(e) {
+		console.log(e.data)
 		$scope.data = e.data;
 		$scope.$watch('data', function() {
 			$scope.arr = []
