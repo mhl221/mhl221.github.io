@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 angular.module('rulerApp').controller("gy", ["$scope","$http","$location","$cookieStore",function($scope,$http,$location,$cookieStore){
 
 		$scope.tui = function(){
@@ -10,4 +11,12 @@ angular.module('rulerApp').controller("gy", ["$scope","$http","$location","$cook
 	
 
 
+=======
+angular.module('rulerApp')
+	.controller("gy",["$scope","$http","$cookieStore","$location",function($scope,$http,$cookieStore,$location){
+	$scope.tan=function(){
+		alert(1)
+	}
+}])
+>>>>>>> origin/master
 
