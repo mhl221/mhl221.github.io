@@ -1,4 +1,5 @@
 angular.module('rulerApp')
+
 .controller("niez", ["$scope","$http",'$location','$cookieStore','$stateParams',function($scope,$http,$location,$cookieStore,$stateParams) {
 	$scope.bf=$scope.bff=$scope.bfff=$scope.bffff=false;
 	$http({

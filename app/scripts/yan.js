@@ -14,6 +14,7 @@ angular.module('rulerApp').filter('fy', function() {
 		params: {
 			'uid': $cookieStore.get('uid')
 		}
+		
 	}).then(function(e) {
 		console.log(e.data)
 		$scope.data = e.data;
@@ -29,7 +30,6 @@ angular.module('rulerApp').filter('fy', function() {
 
 		$scope.page = 0
 		$scope.pages = function(e) {
-
 			$scope.page = e
 		}
 		$scope.prev = function() {
@@ -73,7 +73,6 @@ angular.module('rulerApp').filter('fy', function() {
 
 				$scope.page = 0
 				$scope.pages = function(e) {
-
 					$scope.page = e
 				}
 				$scope.prev = function() {
@@ -92,5 +91,5 @@ angular.module('rulerApp').filter('fy', function() {
 
 		}, function() {})
 	}
-
+	
 }])
