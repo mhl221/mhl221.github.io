@@ -16,7 +16,7 @@
 	cursor: pointer;
 }
 
-#san {
+#xian #san {
 	z-index: 10;
 	float: right;
 	margin-top: -30px;
@@ -73,14 +73,12 @@ a.prevLink:hover,a.nextLink:hover {
     cursor: pointer;
 }
 .currentStep{
-    border-color: #fff;
-    padding: 0 4px;
-    color: #f90;
-    font-weight: bold;
-    float: left;
     display: block;
     line-height: 24px;
     height: 24px;
+    border: solid 1px #aaa;
+    color: blue;
+    background: #f90;
     padding: 0 9px;
     font-size: 12px;
     float: left;

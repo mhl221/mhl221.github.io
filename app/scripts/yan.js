@@ -30,7 +30,6 @@ angular.module('rulerApp').filter('fy', function() {
 
 		$scope.page = 0
 		$scope.pages = function(e) {
-
 			$scope.page = e
 		}
 		$scope.prev = function() {
@@ -52,7 +51,6 @@ angular.module('rulerApp').filter('fy', function() {
 			url: "http://47.90.20.200:1602/item/" + e.id,
 			method: "delete"
 		}).then(function() {
-			alert(1)
 			$scope.data.splice($scope.data.indexOf(e), 1)
 
 			$http({
