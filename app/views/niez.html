@@ -15,6 +15,7 @@
 		  <label ng-repeat='x in n.top' style="margin-right: 80%;" class="hd" ng-click="dj(x.value)">
 		    <input type="radio" name="tong" >
 		    {{x.value}}
+	<div class="n_b" ui-sref="miao({tit2:ww.title,tit3:n.title,tit4:n.top[0].value,tit5:n.top[1].value,tit6:n.top[2].value,tit7:n.top[3].value})" ng-click='n_tj()'>提交</div>
 		  </label>
 		</div>
 		
@@ -22,5 +23,4 @@
 			<summernote config="options" class='fwb'></summernote>
 		</div>
 	</div>
-	<div class="n_b" ui-sref="miao" ng-click='n_tj()'>提交</div>
 </div>

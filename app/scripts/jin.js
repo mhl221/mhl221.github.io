@@ -72,14 +72,26 @@ angular.module('rulerApp').controller("jin", ["$scope","$http","$location","$coo
 			/*console.log(e.config.data.username)
 			console.log(e.data.id);	*/
 			console.log(e)
+		
             $cookieStore.put('id',e.data.id)
             $cookieStore.put('username',e.config.data.username)
-		   
+		     if(use==e.config.data.username){
+		     	$scope.xian = false;
+		        
+		     }else{
+		     	
+		     	
+		     
+		     }
 		   	   
 		     	 uid=e.data.uid;
 		     	// console.log(uid)
 		         $cookieStore.put('uid',uid);
-			     $location.path('/gy');
+		    
+		         	
+		         	$location.path('/gy');
+		        
+			     
 			  
           
           if(jb.attr("index")=="true"){
@@ -94,7 +106,8 @@ angular.module('rulerApp').controller("jin", ["$scope","$http","$location","$coo
 
 		},function(e) {
 			console.log('登录失败');
-            $scope.isShow = true;  
+            $scope.isShow = true; 
+            $scope.xian = true;
 		});
 	}
 
@@ -105,8 +118,8 @@ $scope.xiu = function(){
 		//console.log(wuid)
 		console.log(musername)
 		$http({
-			url:"http://47.90.20.200:1602/users",
-			method: "post",
+			url:"http://47.90.20.200:1602/users"+wuid,
+			method: "put",
 			data:{'username':musername,'password':$scope.password}
 		}).then(function(e){
 			console.log(e)

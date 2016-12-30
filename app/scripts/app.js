@@ -22,9 +22,9 @@ angular
         templateUrl:"views/gy.html",
 //      controller:"gy"
       }).state("miao",{
-        url:"/miao",
+        url:"/miao/:tit2&&:tit3&&:tit4&&:tit5&&:tit6&&:tit7",
         templateUrl:"views/miao.html",
-      	controller:"miao"
+     	controller:"miao"
       }).state("gy.li",{
         url:"/li",
         templateUrl:"views/li.html",
