@@ -45,7 +45,6 @@ angular.module('rulerApp')
  			aaa=1;
  		}
  		$cookieStore.put('top',aaa)
- 		
  	}
 // 	$scope.dd=function(a){
 // 		var ddd;
